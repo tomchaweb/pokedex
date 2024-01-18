@@ -11,6 +11,7 @@ GetPokemon();
 
 async function GetPokemon(){
     let pokemon = userInput.value;
+    pokemon = pokemon.toLowerCase();
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
     if (!response.ok){
         throw new error("Fetch Unsuccessful")
